@@ -11,7 +11,9 @@ var web_shell = JavaScriptBridge.get_interface("web_shell")
 func _init():
 	# Create required directories and move into the tmp directory.
 	_cwd = "/tmp"
+	print("init test") # .. and this
 	await run("mkdir -p '%s/repos'" % game.tmp_prefix)
+	print("the tester") # remove this
 	_cwd = game.tmp_prefix
 	
 func cd(dir):
@@ -20,12 +22,15 @@ func cd(dir):
 # Run a shell command given as a string. Run this if you're interested in the
 # output of the command.
 func run(command, crash_on_fail=true):
+	print("el kocs")
 	var shell_command = ShellCommand.new()
 	shell_command.command = command
 	shell_command.crash_on_fail = crash_on_fail
 	
+	print("le kick")
 	run_async_thread(shell_command)
 	await shell_command.done
+	print("yoy")
 	print("output of (" +command+ "): >>" + shell_command.output + "<<")
 	exit_code = shell_command.exit_code
 	return shell_command.output
@@ -57,7 +62,7 @@ func run_async_thread(shell_command):
 	hacky_command += "cd '%s' || exit 1;" % _cwd
 	hacky_command += command
 	
-	print("running >>" + hacky_command + "<<")
+	print("running >> " + hacky_command + " <<")
 
 	var result
 	if _os == "Linux" or _os == "OSX":
@@ -102,7 +107,7 @@ func run_async_thread(shell_command):
 	if _os != "Web":
 		if debug:
 			print(result["output"])
-		
+		print("execution done.")
 		shell_command.output = result["output"]
 		shell_command.exit_code = result["exit_code"]
 		shell_command.emit_signal("done")

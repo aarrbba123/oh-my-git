@@ -60,7 +60,9 @@ func run_async_thread(shell_command):
 	#print(hacky_command)
 
 	var result
+	print("koca")
 	var shell_command_internal = game.shell_test(hacky_command)
+	print("oiia")
 
 	shell_command.output = shell_command_internal.output
 	shell_command.exit_code = shell_command_internal.exit_code

@@ -14,7 +14,7 @@ config/name="Oh My Git!"
 run/main_scene="res://scenes/title.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="Oh My Git"
-config/features=PackedStringArray("4.1")
+config/features=PackedStringArray("4.2")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 
 [autoload]
@@ -111,5 +111,5 @@ limits/debugger/max_warnings_per_second=1000
 
 [rendering]
 
-renderer/rendering_method="mobile"
+renderer/rendering_method="gl_compatibility"
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)

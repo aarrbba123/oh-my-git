@@ -24,6 +24,12 @@ func _ready():
 	
 	var args = helpers.parse_args()
 	
+	if get_node(".") == null:
+		helpers.crash("ERR: Expected a node, got NULL")
+	else:
+		print("Node detected.")
+		print("Node: " + get_node(".").to_string())
+	
 	if args.has("sandbox"):
 		var err = get_tree().change_scene_to_file("res://scenes/sandbox.tscn")
 		if err != OK:

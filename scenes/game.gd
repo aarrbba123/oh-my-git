@@ -144,13 +144,16 @@ func shell_test(command):
 	mutex.lock()
 	#print("go")
 	#print(command)
+	print("uhh1")
 	var before = Time.get_ticks_msec()
 	
 	while not $ShellServer._connected:
+		print("not connected")
 		$ShellServer._process(0.1)
 	
 	var response = $ShellServer.send(command)
 	var after = Time.get_ticks_msec()
+	print("uhh2")
 	#print("took " + str(after-before)+" ms")
 	#print("stop")
 	mutex.unlock()
