@@ -24,7 +24,7 @@ Wanna build your own level? Great! Here's how to do it:
 1. Make a copy of an existing level or start writing your own. See the documention of the format below.
 1. Write and test your level. If you're happy with it, feel free to send it to us in a pull request! <3
 
-**NOTE:** For windows users, download the latest [Git for windows](https://github.com/git-for-windows/git/releases) and install into `depenencies/windows/git/` on the repo. (mkdir -p `dependencies/windows/git` if it is nonexistent)
+**NOTE:** For windows users, download the latest [Git for windows](https://github.com/git-for-windows/git/releases) and install into `depenencies/windows/git/` on the repo. (`mkdir -p dependencies/windows/git` if it is nonexistent)
 ### Level format
 
 ```
