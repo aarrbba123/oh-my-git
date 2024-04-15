@@ -16,7 +16,7 @@ If you have ideas for new features, we'd be excited to hear them! Also in that c
 
 Wanna build your own level? Great! Here's how to do it:
 
-1. Download the latest version of the [Godot **3** game engine](https://godotengine.org/download/3.x). Godot 4 is not supported yet.
+1. Download the latest version of the [Godot **4** game engine](https://godotengine.org/download/4.x).
 1. Clone this repository.
 1. Run the game – the easiest way to do so is to run `godot scenes/main.tscn` from the project directory.
 1. Get a bit familiar with the levels which are currently there.
@@ -24,6 +24,7 @@ Wanna build your own level? Great! Here's how to do it:
 1. Make a copy of an existing level or start writing your own. See the documention of the format below.
 1. Write and test your level. If you're happy with it, feel free to send it to us in a pull request! <3
 
+**NOTE:** For windows users, download the latest [Git for windows](https://github.com/git-for-windows/git/releases) and install into `depenencies/windows/git/` on the repo. (mkdir -p `dependencies/windows/git` if it is nonexistent)
 ### Level format
 
 ```
